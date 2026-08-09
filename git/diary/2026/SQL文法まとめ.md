@@ -9,7 +9,7 @@ CRUD処理
 - U…UPDATE:更新
 - D…DELETE:削除
 
-CREATE文
+INSERT文
 =
 例１顧客リストテーブルにデータを挿入する。
 ```
@@ -31,7 +31,7 @@ INSERT INTO 顧客リスト (顧客ID, 氏名)
 VALUES (5, '田中一郎');
 ```
 
-READ文
+SELECT文
 =
 例１「顧客リスト」からすべてのデータを読み出す
 ```
