@@ -64,7 +64,7 @@ UPDATE 社員リスト
 SET 給与 = 給与 + 10000
 WHERE 部署ID = 10;
 ```
-DEKETE文
+DELETE文
 =
 例１-- 顧客IDが「5」のデータを削除する
 ```
@@ -93,5 +93,5 @@ DELETE FROM 一時データ;
 トランザクション
 =
 
-NULL価
+NULL値
 =
