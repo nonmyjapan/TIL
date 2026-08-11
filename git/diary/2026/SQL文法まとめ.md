@@ -92,6 +92,26 @@ DELETE FROM 一時データ;
 
 トランザクション
 =
+```
+-- 1. トランザクションの開始
+BEGIN TRANSACTION;  -- ※DBMSによっては 'START TRANSACTION;' や 'BEGIN;'
 
+-- 2. 処理①：Aさんの口座から10,000円を引く
+UPDATE accounts
+SET balance = balance - 10000
+WHERE account_id = 'A';
+
+-- 3. 処理②：Bさんの口座に10,000円を加算する
+UPDATE accounts
+SET balance = balance + 10000
+WHERE account_id = 'B';
+
+-- 4. 処理の確定（すべての処理が成功した場合）
+COMMIT;
+```
+【ACID特性】
+トランザクション処理では、以下の 「All or Nothing（すべて実行されるか、まったく実行されないか）」 の原則を守ることが最重要となります。
+- COMMIT（コミット）：すべての処理が正常に完了したため、変更をデータベースへ永久に保存する。
+- ROLLBACK（ロールバック）：途中で失敗したため、変更を破棄して開始前の状態に復元する。
 NULL値
 =
