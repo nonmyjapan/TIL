@@ -296,3 +296,6 @@ FROM orders
 GROUP BY customer_id
 HAVING SUM(total_amount) > 100000;
 ```
+
+SELECT COUNT
+
